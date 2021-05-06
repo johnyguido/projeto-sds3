@@ -34,13 +34,14 @@ public class Sale implements Serializable{
 		
 	}
 
-	public Sale(Long id, Integer visited, Integer deals, Double amount, LocalDate date) {
+	public Sale(Long id, Integer visited, Integer deals, Double amount, LocalDate date, Seller seller) {
 
 		this.id = id;
 		this.visited = visited;
 		this.deals = deals;
 		this.amount = amount;
 		this.date = date;
+		this.seller = seller;
 	}
 
 	public Long getId() {
@@ -106,6 +107,14 @@ public class Sale implements Serializable{
 		} else if (!id.equals(other.id))
 			return false;
 		return true;
+	}
+
+	public Seller getSeller() {
+		return seller;
+	}
+
+	public void setSeller(Seller seller) {
+		this.seller = seller;
 	}
 	
 	
