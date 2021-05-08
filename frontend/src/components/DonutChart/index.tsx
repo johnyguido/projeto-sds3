@@ -8,8 +8,6 @@ type ChartData = {
 
     series: number[];
     labels: string[];
-
-
 }
 
 
